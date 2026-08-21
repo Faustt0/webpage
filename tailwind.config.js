@@ -39,6 +39,9 @@ export default {
         sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
         display: ['Outfit', 'Inter', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+        pixel: ['"Press Start 2P"', 'monospace'],
+        medieval: ['MedievalSharp', 'cursive', 'serif'],
+        silkscreen: ['Silkscreen', 'monospace'],
       },
       boxShadow: {
         'glow-pink': '0 0 25px -5px rgba(244, 63, 94, 0.35)',

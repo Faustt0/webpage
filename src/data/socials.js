@@ -11,7 +11,7 @@ export const socials = {
   patreon: {
     name: "Patreon",
     url: "https://www.patreon.com/Faustto",
-    description: "Support development, gain early access to game builds, exclusive WIP art, and polls.",
+    description: "Support development, gain early access to game builds, exclusive / WIP content, and polls.",
     handle: "Faustto",
     icon: "Heart",
     badge: "Early Access & Backer Builds",
@@ -19,7 +19,7 @@ export const socials = {
   },
   discord: {
     name: "Discord Community",
-    url: "https://discord.gg/faustto", // Placeholder or direct invite
+    url: "https://discord.gg/Cx9SDwHNtM",
     description: "Chat with the community, report bugs, get guides assistance, and discuss updates.",
     handle: "Faustto's Realm",
     icon: "MessageSquare",
@@ -29,19 +29,10 @@ export const socials = {
   deviantart: {
     name: "DeviantArt",
     url: "https://www.deviantart.com/faustto",
-    description: "Browse concept art, character designs, development changelogs, and announcements.",
+    description: "Browse character designs and see info on my games",
     handle: "Faustto",
     icon: "Palette",
     badge: "Art & Devlogs",
     color: "#05cc47"
-  },
-  github: {
-    name: "GitHub",
-    url: "https://github.com/Faustt0",
-    description: "Community guides, documentation, and web repository.",
-    handle: "Faustt0",
-    icon: "Github",
-    badge: "Website Code",
-    color: "#e2e8f0"
   }
 };

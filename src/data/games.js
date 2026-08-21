@@ -1,264 +1,237 @@
 export const games = [
   {
-    id: "growing-explorations",
-    title: "Growing Explorations",
-    shortTitle: "GE",
-    genre: "Open-World RPG / Muscle Growth Simulation",
-    status: "Active Development",
-    statusColor: "emerald",
-    releaseStage: "Version 0.20+ Alpha",
-    bannerTag: "Open World • Dual Art • Dynamic Growth",
-    theme: {
-      primary: "from-emerald-500 via-teal-500 to-rose-600",
-      accentColor: "#10b981",
-      glowColor: "rgba(16, 185, 129, 0.3)",
-      badgeBg: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
-      cardBorder: "hover:border-emerald-500/50",
-      headerGradient: "from-emerald-950/80 via-[#111c18]/90 to-[#0c0e18]",
-      btnGradient: "from-emerald-500 via-teal-600 to-rose-600 hover:from-emerald-600 hover:to-rose-700",
-      iconColor: "text-emerald-400",
-    },
-    heroQuote: "Forge your strength from a nimble wanderer into an unstoppable titaness in a vast, reactive world.",
-    tagline: "An expansive open-world RPG where your character explores uncharted lands, defeats powerful adversaries, and grows increasingly muscular with every battle and training regimen.",
-    description: `Growing Explorations is an open-world adventure RPG centered around continuous physical transformation and empowerment. 
-
-Set in an untamed continent teeming with ancient ruins, monster dens, and competitive fight arenas, you guide your heroine from humble beginnings through multi-stage physical growth transformations. 
-
-Every battle fought, heavy item forged, and nutrition catalyst consumed directly affects your character's in-game pixel art sprite and high-definition illustrated portraits across multiple growth tiers.`,
-    itchUrl: "https://faustto.itch.io/growing-explorations",
-    patreonUrl: "https://www.patreon.com/Faustto",
-    platforms: ["Windows PC", "Linux", "Mac (Wine)"],
-    features: [
-      {
-        title: "Dynamic Multi-Stage Growth",
-        desc: "Watch your heroine transform visually and statistically from fit explorer to colossal powerhouse through battle conditioning and special nutrients."
-      },
-      {
-        title: "Expansive Open World",
-        desc: "Roam forests, mountain peaks, hidden dungeons, and lively settlements with non-linear exploration and secrets."
-      },
-      {
-        title: "Dual Art Aesthetic",
-        desc: "Explore with crisp animated pixel sprites in the overworld, paired with richly expressive, high-resolution dialogue portraits."
-      },
-      {
-        title: "Branching Quests & Lore",
-        desc: "Engage with quirky NPCs, take on guild bounties, unlock arena tournaments, and conquer realm bosses."
-      },
-      {
-        title: "Deep Stat & Gear System",
-        desc: "Equip colossal weapons that require raw strength thresholds to wield, craft muscle tonics, and build your ideal playstyle."
-      }
-    ],
-    growthTiers: [
-      { tier: "Tier 1", name: "Agile Adventurer", desc: "Lean, athletic build with quick combat reflexes." },
-      { tier: "Tier 2", name: "Hardened Warrior", desc: "Defined muscular frame, broad shoulders, and increased carrying power." },
-      { tier: "Tier 3", name: "Colossal Amazon", desc: "Massive upper body mass, dense abs, and crushing melee force." },
-      { tier: "Tier 4+", name: "Titaness Supreme", desc: "Towering physique, earth-shaking strength, and legendary intimidation." }
-    ],
-    latestNews: "v0.20 update introduced new high-tier wilderness dungeons, expanded character transformation stages, and combat balance passes.",
-    systemRequirements: {
-      os: "Windows 7/8/10/11 (64-bit)",
-      processor: "Intel Core i3 2.0 GHz / AMD equivalent",
-      memory: "4 GB RAM",
-      graphics: "DirectX 11 compatible GPU",
-      storage: "1.5 GB free space"
-    },
-    guides: [
-      {
-        id: "ge-quickstart",
-        title: "Beginner's Survival & Early Growth Guide",
-        difficulty: "Beginner",
-        readTime: "5 min read",
-        summary: "Essential early tips on resting, protein rations, avoiding stamina exhaustion, and your first gym routines.",
-        sections: [
-          {
-            heading: "Early Priorities",
-            text: "Do not rush into high-tier wilderness regions right away. Begin by completing local town tasks to gather gold for Protein Rations and recovery salves."
-          },
-          {
-            heading: "Managing Growth Meters",
-            text: "Training and intense battles generate muscle fatigue. Always rest at the inn or a campfire to allow your body to recover and lock in permanent stat gains."
-          }
-        ],
-        spoilers: [
-          {
-            title: "Secret Early Protein Cache",
-            content: "Inspect the hollow tree behind the town blacksmith (Zone 1-B). You will find 2x High-Density Protein Flasks and 150 Gold to jumpstart your stats!"
-          }
-        ]
-      },
-      {
-        id: "ge-breakthrough-quests",
-        title: "Growth Tier Breakthrough Protocols",
-        difficulty: "Intermediate",
-        readTime: "7 min read",
-        summary: "How to trigger each morphological tier transition and pass the Ancient Crucible trials.",
-        sections: [
-          {
-            heading: "Advancing to Tier 2 & Tier 3",
-            text: "Once your Growth Meter reaches 100%, you must pass the trial at the local Crucible of Might. Equip your highest strength weapon and drink a Fortifying Tonic before initiating the trial."
-          }
-        ],
-        spoilers: [
-          {
-            title: "Tier 4 Titaness Trial Location",
-            content: "The Tier 4 Crucible is hidden behind the waterfall at Iron Summit (requires STR >= 60 to push open the stone gate)."
-          }
-        ]
-      }
-    ]
-  },
-  {
     id: "beyond-evolution",
     title: "Beyond Evolution",
     shortTitle: "BE",
-    genre: "Turn-Based Gacha RPG / Tactical Battler",
+    genre: "Turn Based Gacha",
     status: "Active Development",
-    statusColor: "purple",
-    releaseStage: "Early Access Alpha",
-    bannerTag: "Sci-Fi Gacha • Genetic Infusions • Tactical Squads",
+    statusColor: "sky",
+    releaseStage: "Version 1.1.5",
+    bannerTag: "Post-Apocalyptic RPG • Genetic Evolutions • Tactical Squads",
     theme: {
-      primary: "from-purple-500 via-fuchsia-500 to-cyan-500",
-      accentColor: "#a855f7",
-      glowColor: "rgba(168, 85, 247, 0.35)",
-      badgeBg: "bg-purple-500/20 text-purple-300 border-purple-500/30",
-      cardBorder: "hover:border-purple-500/50",
-      headerGradient: "from-purple-950/90 via-[#181128]/90 to-[#0c0e18]",
-      btnGradient: "from-purple-600 via-pink-600 to-cyan-500 hover:from-purple-700 hover:to-cyan-600",
-      iconColor: "text-purple-400",
+      primary: "from-sky-500 via-cyan-500 to-blue-600",
+      accentColor: "#38bdf8",
+      glowColor: "rgba(56, 189, 248, 0.35)",
+      badgeBg: "bg-sky-500/20 text-sky-300 border-sky-500/30",
+      cardBorder: "hover:border-sky-500/50",
+      headerGradient: "from-sky-950/90 via-[#0a1628]/90 to-[#060b14]",
+      btnGradient: "from-sky-500 via-cyan-500 to-blue-600 hover:from-sky-400 hover:to-cyan-500",
+      iconColor: "text-sky-400",
     },
-    heroQuote: "Engineer the ultimate legion of hyper-muscular heroines to halt a demonic cataclysm.",
-    tagline: "A narrative turn-based tactical RPG where you research genetic strength enhancements, assemble powerhouse squads, and evolve character forms.",
-    description: `Beyond Evolution takes place in a futuristic world facing an apocalyptic demonic invasion. 
+    heroQuote: "Grow muscles to prevail in the demon invasion",
+    tagline: "A Turn-Based Gacha RPG where you play as a young scientist gathering an army of hyper-muscular warriors to halt the demonic cataclysm.",
+    description: `Five years ago, catastrophic demon-like entities descended upon the Earth, corrupting landscapes and destroying all civilization in their path. The world's armies were mobilized in a desperate war of defense, but humanity was utterly overwhelmed—forcing survivors to flee and establish fortified bunker settlements known as Holders.
 
-As a lead genetic researcher, you must recruit, experiment with bio-catalysts, and transform everyday operatives into towering, muscle-bound juggernauts capable of crushing demonic monstrosities.
+As demonic miasma—dubbed "mana fog"—blanketed the lands, continued exposure began mutating humans, granting demonic traits, superpowers, or full demonification when overexposed. A common mutation from the fog is the transformation of females into futanari.
 
-Experience deep tactical turn-based combat, synergy-based squad building, character-specific bond storylines, and multi-tier muscle transformations for every member of your roster.`,
+Playing as a young scientist researching demon biology, you discover that when a female or futanari consumes a demon's heart, their power surges exponentially without the side effects of demonification. Operating from your Holder, you set out to gather an army of enhanced warriors to combat the apocalypse.`,
     itchUrl: "https://faustto.itch.io/beyond-evolution",
     patreonUrl: "https://www.patreon.com/Faustto",
-    platforms: ["Windows PC", "Web / Browser"],
+    platforms: ["Windows", "Mac", "Linux", "Android"],
     features: [
       {
-        title: "Tactical Turn-Based Combat",
-        desc: "Master element affinities, guard breaks, action-point combos, and devastating ultimate physical strikes."
+        title: "Turn-Based Combat",
+        desc: "Strategic turn-based battles featuring mana-consuming skills and core character attributes: Health, Agility, Defence, Resistance, Attack, and Magic."
       },
       {
-        title: "Genetic Form Evolutions",
-        desc: "Each character features distinct physical muscle growth evolution stages that alter both visual artwork and combat skills."
+        title: "Muscle Growth!",
+        desc: "Feed demon hearts to your warriors to trigger their physical transformation, expanding their muscles and increasing their battle power."
       },
       {
-        title: "Rich Narrative & Bond Events",
-        desc: "Interact with heroines in the laboratory archive to unlock deep backstories, unique dialogues, and special bond bonuses."
+        title: "Gacha!",
+        desc: "Summon and collect a diverse roster of unique warriors to assemble your strike team."
       },
       {
-        title: "Player Customization Modes",
-        desc: "Includes toggleable content modes (including partial non-futa settings) to suit individual player preferences."
+        title: "Character Bonds",
+        desc: "Interact and deepen relationships with your warriors inside the Holder to unlock bond events, backstories, and combat perks."
       }
     ],
-    growthTiers: [
-      { tier: "Form 1", name: "Operative Base", desc: "Initial military physique and fundamental skill set." },
-      { tier: "Form 2", name: "Bio-Enhanced", desc: "Noticeable bicep, quad, and trap growth with energized aura." },
-      { tier: "Form 3", name: "Apex Juggernaut", desc: "Hypertrophied muscle mass, heavy armor displacement, and ultimate skill awakening." }
+    contributors: [
+      { name: "Faustto", role: "Programming & Art" },
+      { name: "Robomuffin", role: "Writing" }
     ],
-    latestNews: "Chapter 4 story missions are live with two new banner characters and squad synergy balance upgrades.",
+    faqs: [],
     systemRequirements: {
-      os: "Windows 10/11 (64-bit)",
-      processor: "Intel Core i5 / AMD Ryzen 5 or higher",
-      memory: "8 GB RAM",
-      graphics: "Dedicated GPU (GTX 960 / RX 560 or better)",
-      storage: "2.0 GB free space"
+      processor: "Dual-Core 2.0 GHz (x86_64 / SSE4.2)",
+      memory: "4 GB RAM",
+      graphics: "Vulkan 1.0 / OpenGL 3.3 compatible GPU",
+      storage: "1.0 GB free space"
+    }
+  },
+  {
+    id: "growing-explorations",
+    title: "Growing Explorations",
+    shortTitle: "GE",
+    genre: "Fantasy RPG",
+    status: "On Hiatus",
+    statusColor: "amber",
+    releaseStage: "Version 2.0.2",
+    bannerTag: "Fantasy RPG • Elyssia • Dynamic Muscle Growth",
+    theme: {
+      primary: "from-amber-500 via-yellow-500 to-rose-600",
+      accentColor: "#f59e0b",
+      glowColor: "rgba(245, 158, 11, 0.3)",
+      badgeBg: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+      cardBorder: "hover:border-amber-500/50",
+      headerGradient: "from-amber-950/80 via-[#1c140c]/90 to-[#0e0c08]",
+      btnGradient: "from-amber-500 via-orange-600 to-rose-600 hover:from-amber-600 hover:to-rose-700",
+      iconColor: "text-amber-400",
     },
-    guides: [
+    heroQuote: "Grow muscles to restore balance in Elyssia",
+    tagline: "A Fantasy RPG where you are summoned by Veridia, the Goddess of Strength, into a realm of mythical women to master muscle and magic, confront corrupt forces, and restore balance to Elyssia.",
+    description: `The world of Elyssia was created by Veridia, the Goddess of Strength, as a realm inhabited solely by mythical women where power—manifested through physical muscle and arcane magic—is the very essence of life. When a shadowy organization threatens to overthrow Veridia's reign and corrupt the realm, the Goddess summons an otherworldly hero to restore balance.
+
+Guided by divine messengers, you venture through Elyssia's diverse provinces. Along your journey, you encounter powerful allies researching experimental muscle-enhancing concoctions, beast queens defending sacred lands, and rebellious mages challenging the corrupt archmages who control the capital of Arcathis.
+
+Embark on an expansive adventure across diverse biomes, battling distinct adversaries and unlocking ever-greater thresholds of muscular might to uncover the shadowy conspiracy at the heart of Elyssia.`,
+    itchUrl: "https://faustto.itch.io/growing-explorations",
+    patreonUrl: "https://www.patreon.com/Faustto",
+    platforms: ["Windows", "Mac", "Linux"],
+    features: [
       {
-        id: "be-gacha-synergy",
-        title: "Squad Synergy & Bio-Gem Economy",
-        difficulty: "Intermediate",
-        readTime: "6 min read",
-        summary: "How to assemble balanced teams and efficiently spend Bio-Gems on rate-up banners.",
-        sections: [
-          {
-            heading: "Optimal Squad Setup",
-            text: "Pair 1 Primary Hypercarrier (Physical DPS) with 1 Armor-Shredder Frontliner, 1 AP Buffer, and 1 Healer for endgame raid consistency."
-          }
-        ],
-        spoilers: [
-          {
-            title: "Secret Laboratory Bond Dialogue",
-            content: "Reach Bond Level 10 with Valeria to unlock the classified 'Project Colossus' lore file in the Research Terminal."
-          }
-        ]
+        title: "RPG-Like Combat System",
+        desc: "Utilize basic attacks and character-specific skills and abilities that grow with the character."
+      },
+      {
+        title: "Many Stages of Muscle Growth",
+        desc: "Characters progress through multiple stages of muscle growth by gathering XP from defeating enemies."
+      },
+      {
+        title: "Different Characters",
+        desc: "Play with different races like Human, Elf, Orc, and Dwarf that offer distinct experiences."
+      },
+      {
+        title: "Large World Map",
+        desc: "Explore an expansive world featuring diverse biomes: Plains, Forest, and Taiga."
+      },
+      {
+        title: "Distinct Enemies",
+        desc: "Encounter and battle a diverse variety of distinct enemies throughout each biome."
+      },
+      {
+        title: "Storyline & Quests",
+        desc: "Unravel the mystery behind the shadowy organization threatening Goddess Veridia through narrative chapter quests."
       }
-    ]
+    ],
+    contributors: [
+      { name: "Faustto", role: "Programming" },
+      { name: "Vlision", role: "3D Portraits", url: "https://www.deviantart.com/vlision" },
+      { name: "AzazellzAI", role: "AI Portraits", url: "https://www.deviantart.com/azazellzai" },
+      { name: "Meredosia", role: "SFX & Music", url: "https://meredosia.itch.io/" },
+      { name: "FinuArts", role: "Pixel Art", url: "https://x.com/FinuArts" },
+      { name: "Jaasistyles", role: "Pixel Art", url: "https://www.fiverr.com/s/ak1k9WA" }
+    ],
+    faqs: [],
+    systemRequirements: {
+      processor: "Dual-Core 2.0 GHz (x86_64 / SSE4.2)",
+      memory: "4 GB RAM",
+      graphics: "Vulkan 1.0 / OpenGL 3.3 compatible GPU",
+      storage: "1.0 GB free space"
+    }
   },
   {
     id: "expanding-horizons",
     title: "Expanding Horizons",
     shortTitle: "EH",
-    genre: "2D Simulation / Management RPG",
-    status: "Completed / Classic Archive",
-    statusColor: "slate",
-    releaseStage: "Final Classic Version",
-    bannerTag: "Classic Simulation • Nostalgic Growth • Archive",
+    genre: "Simulation / Management",
+    status: "Deprecated",
+    releaseStage: "Version 0.6",
+    bannerTag: "Simulation • Facility Management • Classic Archive",
     theme: {
-      primary: "from-amber-600 via-rose-600 to-indigo-600",
-      accentColor: "#f59e0b",
-      glowColor: "rgba(245, 158, 11, 0.3)",
-      badgeBg: "bg-amber-500/20 text-amber-300 border-amber-500/30",
-      cardBorder: "hover:border-amber-500/50",
-      headerGradient: "from-amber-950/70 via-[#1c1811]/90 to-[#0c0e18]",
-      btnGradient: "from-amber-600 via-rose-600 to-indigo-600 hover:from-amber-700 hover:to-indigo-700",
-      iconColor: "text-amber-400",
+      primary: "from-white via-slate-200 to-red-500",
+      accentColor: "#ef4444",
+      glowColor: "rgba(239, 68, 68, 0.35)",
+      badgeBg: "bg-red-500/20 text-red-300 border-red-500/40",
+      cardBorder: "hover:border-red-500/60",
+      headerGradient: "from-[#1c0a0d]/95 via-[#120709]/90 to-[#0a0a0f]",
+      btnGradient: "from-white via-slate-100 to-red-500 hover:from-slate-200 hover:to-red-600",
+      iconColor: "text-red-500",
     },
-    heroQuote: "The foundational simulation game exploring the beauty and progression of female physical empowerment.",
-    tagline: "Faustto's foundational simulation game featuring classic stat management, training routines, and milestone-based growth.",
-    description: `Expanding Horizons was one of Faustto's earliest and most influential simulation projects. 
-
-While its active development is concluded and preserved as a classic archive, it established the core growth formulas, visual pacing, and passionate community that laid the groundwork for Growing Explorations and Beyond Evolution.`,
+    heroQuote: "Synthesize life. Manage growth. Achieve peak physical form.",
+    tagline: "A 2D simulation and management game where you create girls and help them grow muscles.",
+    description: `Step into the role of a lead research scientist conducting biological synthesis experiments in a high-tech laboratory. You synthesize human women and oversee their daily progression, guiding them to develop immense muscular power through specialized facilities, training regimens, and anabolic formulas.`,
     itchUrl: "https://faustto.itch.io/expanding-horizons",
     patreonUrl: "https://www.patreon.com/Faustto",
-    platforms: ["Windows PC"],
+    platforms: ["Windows"],
     features: [
       {
-        title: "Classic Growth Management",
-        desc: "Balance daily workout schedules, protein intake, and recovery to unlock escalating muscle tiers."
+        title: "Management",
+        desc: "Unlock many facilities to manage and grow girls with."
       },
       {
-        title: "Milestone Transformations",
-        desc: "Experience visual milestone portraits as your character reaches peak physical condition."
-      },
-      {
-        title: "Historical Foundation",
-        desc: "A beloved classic project that kicked off the Faustto universe."
+        title: "Growth",
+        desc: "Watch every girl grow with potions or through training and work."
       }
     ],
-    growthTiers: [
-      { tier: "Phase I", name: "Gym Enthusiast", desc: "Foundational conditioning and muscle tone." },
-      { tier: "Phase II", name: "Powerhouse", desc: "Significant hypertrophic development across all major muscle groups." },
-      { tier: "Phase III", name: "Olympian Peak", desc: "Extreme mass and sculpted definition." }
+    contributors: [
+      { name: "Faustto", role: "Programming" },
+      { name: "Vlision", role: "3D Portraits", url: "https://www.deviantart.com/vlision" }
     ],
-    latestNews: "Archived. Full standalone builds are available on itch.io.",
+    faqs: [],
     systemRequirements: {
-      os: "Windows 7 or later",
-      processor: "Dual-Core 1.8 GHz",
+      processor: "Dual-Core 2.0 GHz (x86_64 / SSE4.2)",
       memory: "2 GB RAM",
       storage: "500 MB free space"
+    }
+  },
+  {
+    id: "perfect-specimen",
+    title: "Perfect Specimen",
+    shortTitle: "PS",
+    genre: "Factory management / evolution simulation",
+    status: "Classified",
+    statusColor: "purple",
+    releaseStage: "DEMO soon",
+    bannerTag: "Factory Management • Evolution Simulation • Classified",
+    theme: {
+      primary: "from-emerald-400 via-teal-500 to-lime-500",
+      accentColor: "#10b981",
+      glowColor: "rgba(16, 185, 129, 0.35)",
+      badgeBg: "bg-purple-500/20 text-purple-300 border-purple-500/40",
+      cardBorder: "hover:border-emerald-500/60",
+      headerGradient: "from-[#031c14]/95 via-[#02130e]/90 to-[#010806]",
+      btnGradient: "from-emerald-400 via-teal-500 to-emerald-600 hover:from-emerald-300 hover:to-teal-400",
+      iconColor: "text-emerald-400",
     },
-    guides: [
+    heroQuote: "§77-X//░░░ [CLASSIFIED BIO-FACTORY ARCHIVE] ⌁⌁ V-FATAL:: AUTOMATION_PROTOCOL_",
+    tagline: "░░░ SYSTEM INITIALIZED: [FACTORY_REFINERY_SYS_001] » DESIGN CONVEYOR MANIFOLDS AND CHEMICAL PIPELINES ░░░",
+    description: `[ENCRYPTED ARCHIVE :: CLEARANCE LEVEL 9]
+§01//░░░ [CORRUPTED DATA] █████████████████████████ ... BIO-LOG SEQUENCE INITIATED ... ██████████████████
+
+§02//░░░ Construct and manage complex factory automation networks. Design growth serum creating pipelines. █████████████████████████████████████████
+
+§03//░░░ [DATA CORRUPTED // RESTRICTED ACCESS] ███████████████████████████████████████████████████████████`,
+    itchUrl: "https://faustto.itch.io/",
+    patreonUrl: "https://www.patreon.com/Faustto",
+    platforms: ["Windows", "Mac", "Linux"],
+    features: [
       {
-        id: "eh-basics",
-        title: "Classic Progression Overview",
-        difficulty: "Beginner",
-        readTime: "3 min read",
-        summary: "Tips for managing daily stamina and maximizing training cycles in Expanding Horizons.",
-        sections: [
-          {
-            heading: "Stamina Optimization",
-            text: "Do not train two heavy sessions back-to-back without a meal. Stacking fatigue reduces the growth multiplier by 50%."
-          }
-        ],
-        spoilers: []
+        title: "⌬ [FAC_SERUM_AUTOMATION]",
+        desc: "░░░ [DATA CORRUPTED] ██████████████████████████████"
+      },
+      {
+        title: "⚗ [SPECIMEN_INCUBATION_VAT]",
+        desc: "░░░ [RESTRICTED ACCESS] ███████████████████████████"
+      },
+      {
+        title: "⎔ [GENETIC_CLONING_&_CROSSING]",
+        desc: "░░░ [ENCRYPTED SECTOR] ████████████████████████████"
+      },
+      {
+        title: "⏣ [THE_PERFECT_SPECIMEN_PROJECT]",
+        desc: "░░░ [SECURITY OVERRIDE REQUIRED] ██████████████████"
       }
-    ]
+    ],
+    contributors: [
+      { name: "Faustto", role: "Programming" },
+      { name: "???", role: "???", isClassified: true }
+    ],
+    faqs: [],
+    systemRequirements: {
+      processor: "Intel Core i5 / AMD Ryzen 5",
+      memory: "16 GB RAM",
+      graphics: "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580",
+      storage: "???"
+    }
   }
 ];

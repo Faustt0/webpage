@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Search, BookOpen, Clock, Tag, Eye, EyeOff, CheckCircle2, AlertCircle, ArrowLeft, Share2, Sparkles, Filter } from 'lucide-react';
 import { guides, guideCategories } from '../data/guides';
+import { socials } from '../data/socials';
 
 export default function GuideViewer({ selectedGuideId, onSelectGuide, initialCategory = 'all' }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -210,7 +211,7 @@ export default function GuideViewer({ selectedGuideId, onSelectGuide, initialCat
               ← Back to Directory
             </button>
             <div className="text-xs text-slate-400">
-              Have a guide correction or tip? Share it on the <a href="https://discord.gg/faustto" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:underline">Discord</a>!
+              Have a guide correction or tip? Share it on the <a href={socials.discord.url} target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:underline">Discord</a>!
             </div>
           </div>
         </article>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, MessageSquare, Palette, Gamepad2, Github, ExternalLink, Sparkles, Flame } from 'lucide-react';
+import { Heart, MessageSquare, Palette, Gamepad2, ExternalLink, Sparkles, Flame } from 'lucide-react';
 import { socials } from '../data/socials';
 
 export default function CommunitySection() {
@@ -9,16 +9,9 @@ export default function CommunitySection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 reveal-on-scroll">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-bold uppercase tracking-wider mb-3 shadow-glow-pink">
-            <Flame className="w-3.5 h-3.5 text-pink-400" />
-            <span>Connect & Support</span>
-          </div>
           <h2 className="text-3xl sm:text-5xl font-display font-black text-white">
             Community & Channels
           </h2>
-          <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Follow development updates, chat with other FMG gaming fans, unlock early playable builds on Patreon, and check out artwork on DeviantArt.
-          </p>
         </div>
 
         {/* Social Cards Grid */}

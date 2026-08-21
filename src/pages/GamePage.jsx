@@ -1,36 +1,44 @@
 import React, { useState } from 'react';
-import { Gamepad2, Heart, Sparkles, CheckCircle2, Monitor, Cpu, ArrowLeft, BookOpen, AlertCircle, Eye, EyeOff, ChevronRight, Download } from 'lucide-react';
+import { Gamepad2, Heart, Sparkles, CheckCircle2, Monitor, Cpu, HelpCircle, MessageSquare, ChevronDown, ExternalLink } from 'lucide-react';
 import { socials } from '../data/socials';
+import GrowingExplorationsPage from './games/GrowingExplorationsPage';
+import BeyondEvolutionPage from './games/BeyondEvolutionPage';
+import ExpandingHorizonsPage from './games/ExpandingHorizonsPage';
+import PerfectSpecimenPage from './games/PerfectSpecimenPage';
 
 export default function GamePage({ game, onBackHome, onSelectOtherGame }) {
-  const [revealedSpoilers, setRevealedSpoilers] = useState({});
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   if (!game) return null;
 
-  const toggleSpoiler = (id) => {
-    setRevealedSpoilers(prev => ({
-      ...prev,
-      [id]: !prev[id]
-    }));
+  // Custom post-apocalyptic light-blue tactical theme for Beyond Evolution
+  if (game.id === 'beyond-evolution') {
+    return <BeyondEvolutionPage game={game} onBackHome={onBackHome} onSelectOtherGame={onSelectOtherGame} />;
+  }
+
+  // Custom medieval fantasy pixel theme for Growing Explorations
+  if (game.id === 'growing-explorations') {
+    return <GrowingExplorationsPage game={game} onBackHome={onBackHome} onSelectOtherGame={onSelectOtherGame} />;
+  }
+
+  // Custom sci-fi pixel simulation white/red theme for Expanding Horizons
+  if (game.id === 'expanding-horizons') {
+    return <ExpandingHorizonsPage game={game} onBackHome={onBackHome} onSelectOtherGame={onSelectOtherGame} />;
+  }
+
+  // Custom bio-factory incubation chamber theme for Perfect Specimen (Specifen Permect)
+  if (game.id === 'perfect-specimen') {
+    return <PerfectSpecimenPage game={game} onBackHome={onBackHome} onSelectOtherGame={onSelectOtherGame} />;
+  }
+
+  const faqs = game.faqs || [];
+
+  const toggleFaq = (index) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
 
   return (
     <div className="py-8 sm:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      {/* Back Navigation Bar */}
-      <div className="flex items-center justify-between">
-        <button
-          onClick={onBackHome}
-          className="inline-flex items-center space-x-2 text-xs sm:text-sm font-bold text-pink-400 hover:text-pink-300 bg-pink-500/10 hover:bg-pink-500/20 px-4 py-2 rounded-xl border border-pink-500/20 transition-all"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Home</span>
-        </button>
-
-        <span className="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
-          Official Project Hub
-        </span>
-      </div>
-
       {/* Dedicated Themed Game Hero */}
       <section className={`rounded-3xl p-8 sm:p-12 lg:p-16 bg-gradient-to-br ${game.theme.headerGradient} border border-slate-800/90 relative overflow-hidden shadow-2xl reveal-on-scroll`}>
         {/* Glow */}
@@ -149,10 +157,6 @@ export default function GamePage({ game, onBackHome, onSelectOtherGame }) {
               </h3>
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between border-b border-slate-800 pb-1.5">
-                  <span className="text-slate-400">OS</span>
-                  <span className="text-slate-200 font-medium">{game.systemRequirements.os}</span>
-                </div>
-                <div className="flex justify-between border-b border-slate-800 pb-1.5">
                   <span className="text-slate-400">Processor</span>
                   <span className="text-slate-200 font-medium">{game.systemRequirements.processor}</span>
                 </div>
@@ -160,6 +164,12 @@ export default function GamePage({ game, onBackHome, onSelectOtherGame }) {
                   <span className="text-slate-400">Memory</span>
                   <span className="text-slate-200 font-medium">{game.systemRequirements.memory}</span>
                 </div>
+                {game.systemRequirements.graphics && (
+                  <div className="flex justify-between border-b border-slate-800 pb-1.5">
+                    <span className="text-slate-400">Graphics</span>
+                    <span className="text-slate-200 font-medium text-right max-w-[60%]">{game.systemRequirements.graphics}</span>
+                  </div>
+                )}
                 <div className="flex justify-between">
                   <span className="text-slate-400">Storage</span>
                   <span className="text-slate-200 font-medium">{game.systemRequirements.storage}</span>
@@ -167,129 +177,76 @@ export default function GamePage({ game, onBackHome, onSelectOtherGame }) {
               </div>
             </div>
           )}
-
-          <div className="glass-panel p-6 rounded-3xl border border-slate-800 bg-[#0b0d18]/90">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-              Latest Dev Update
-            </h3>
-            <p className="text-xs text-slate-300 leading-relaxed bg-slate-900/60 p-3 rounded-xl border border-slate-800">
-              {game.latestNews}
-            </p>
-          </div>
         </div>
       </section>
 
-      {/* Growth Transformation Tiers Showcase */}
-      {game.growthTiers && (
-        <section className="glass-panel p-8 sm:p-12 rounded-3xl border border-slate-800 bg-[#0c0e1a] reveal-on-scroll">
-          <div className="max-w-2xl mb-8">
-            <span className="text-xs font-bold text-pink-400 uppercase tracking-widest">FMG Progression Stages</span>
-            <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white mt-1">
-              Muscle Growth Tiers
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-300 mt-2">
-              As you progress through training, battles, and milestones in {game.title}, character forms advance through defined morphological phases.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {game.growthTiers.map((tier, idx) => (
-              <div
-                key={idx}
-                className="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 flex flex-col justify-between hover:border-pink-500/40 transition-colors"
-              >
-                <div>
-                  <span className="text-[10px] font-bold uppercase font-mono px-2 py-0.5 rounded bg-pink-500/20 text-pink-300 border border-pink-500/30">
-                    {tier.tier}
-                  </span>
-                  <h4 className="font-display font-bold text-lg text-white mt-3">{tier.name}</h4>
-                  <p className="text-xs text-slate-400 mt-2 leading-relaxed">{tier.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Dedicated Game Guides & Walkthroughs Section */}
-      {game.guides && game.guides.length > 0 && (
-        <section className="glass-panel p-8 sm:p-12 rounded-3xl border border-slate-800 bg-[#0c0e1a] space-y-8 reveal-on-scroll">
+      {/* Dedicated Project FAQ Section */}
+      <section className="glass-panel p-8 sm:p-12 rounded-3xl border border-slate-800 bg-[#0c0e1a] space-y-6 reveal-on-scroll">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800/80 pb-6">
           <div>
-            <div className="inline-flex items-center space-x-2 text-xs font-bold text-purple-400 uppercase tracking-wider mb-2">
-              <BookOpen className="w-4 h-4" />
-              <span>Dedicated Walkthroughs</span>
+            <div className="inline-flex items-center space-x-2 text-xs font-bold text-pink-400 uppercase tracking-widest mb-2">
+              <HelpCircle className="w-4 h-4" />
+              <span>Project Knowledge Base</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white">
-              {game.title} Guides & Walkthroughs
+              {game.title} — FAQ
             </h2>
           </div>
+          <p className="text-xs sm:text-sm text-slate-400 max-w-md">
+            Common questions and answers regarding {game.title} mechanics, updates, and installation.
+          </p>
+        </div>
 
-          <div className="space-y-6">
-            {game.guides.map((guide) => (
+        {faqs.length > 0 ? (
+          <div className="space-y-3">
+            {faqs.map((faq, idx) => (
               <div
-                key={guide.id}
-                className="p-6 sm:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4"
+                key={idx}
+                className="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden transition-all"
               >
-                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/80 pb-3">
-                  <h3 className="font-display font-bold text-xl text-white">
-                    {guide.title}
-                  </h3>
-                  <div className="flex items-center space-x-2 text-xs">
-                    <span className="px-2.5 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">
-                      {guide.difficulty}
-                    </span>
-                    <span className="text-slate-400">{guide.readTime}</span>
+                <button
+                  onClick={() => toggleFaq(idx)}
+                  className="w-full p-5 text-left flex items-center justify-between text-white font-display font-bold text-sm sm:text-base hover:text-pink-300 transition-colors"
+                >
+                  <span>{faq.question}</span>
+                  <ChevronDown className={`w-4 h-4 text-pink-400 transition-transform duration-200 ${openFaqIndex === idx ? 'rotate-180' : ''}`} />
+                </button>
+                {openFaqIndex === idx && (
+                  <div className="px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-3">
+                    {faq.answer}
                   </div>
-                </div>
-
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  {guide.summary}
-                </p>
-
-                {/* Sections */}
-                {guide.sections && guide.sections.map((sec, sIdx) => (
-                  <div key={sIdx} className="space-y-1.5 pt-2">
-                    <h4 className="font-display font-bold text-sm text-pink-300">
-                      {sec.heading}
-                    </h4>
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                      {sec.text}
-                    </p>
-                  </div>
-                ))}
-
-                {/* Spoilers */}
-                {guide.spoilers && guide.spoilers.map((sp, spIdx) => {
-                  const key = `${guide.id}-${spIdx}`;
-                  const isRevealed = revealedSpoilers[key];
-                  return (
-                    <div key={spIdx} className="mt-4 rounded-xl border border-amber-500/30 bg-amber-950/20 overflow-hidden">
-                      <button
-                        onClick={() => toggleSpoiler(key)}
-                        className="w-full flex items-center justify-between px-4 py-3 bg-amber-900/30 hover:bg-amber-900/40 text-amber-300 text-xs font-bold transition-colors"
-                      >
-                        <span className="flex items-center gap-2">
-                          <AlertCircle className="w-4 h-4 text-amber-400" />
-                          <span>Spoiler: {sp.title}</span>
-                        </span>
-                        <span className="flex items-center gap-1 text-[11px] text-amber-400 bg-amber-500/20 px-2 py-0.5 rounded">
-                          {isRevealed ? <EyeOff className="w-3 h-3" /> : <Eye className="w-3 h-3" />}
-                          {isRevealed ? "Hide" : "Reveal"}
-                        </span>
-                      </button>
-                      {isRevealed && (
-                        <div className="p-4 text-xs text-slate-200 border-t border-amber-500/20 bg-black/40 leading-relaxed">
-                          {sp.content}
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+                )}
               </div>
             ))}
           </div>
-        </section>
-      )}
+        ) : (
+          /* Empty FAQ State Placeholder */
+          <div className="p-8 sm:p-12 rounded-2xl bg-slate-900/40 border border-slate-800/80 text-center space-y-4">
+            <div className="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center mx-auto text-pink-400">
+              <MessageSquare className="w-6 h-6" />
+            </div>
+            <div className="space-y-1 max-w-md mx-auto">
+              <h3 className="font-display font-bold text-lg text-white">
+                Frequently Asked Questions Coming Soon
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                We are currently curating gameplay FAQs, troubleshooting steps, and tips for {game.title}.
+              </p>
+            </div>
+            <div className="pt-2">
+              <a
+                href={socials.discord.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-pink-300 border border-pink-500/20 hover:border-pink-500/40 transition-all"
+              >
+                <MessageSquare className="w-3.5 h-3.5 text-indigo-400" />
+                <span>Ask a Question on Discord</span>
+              </a>
+            </div>
+          </div>
+        )}
+      </section>
     </div>
   );
 }

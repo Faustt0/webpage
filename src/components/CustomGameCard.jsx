@@ -53,18 +53,18 @@ export default function CustomGameCard({ game, onSelectGame }) {
           {game.tagline}
         </p>
 
-        {/* Growth Tiers Preview */}
-        {game.growthTiers && (
+        {/* Key Features Preview */}
+        {game.features && (
           <div className="space-y-2">
             <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-pink-400" />
-              <span>Transformation Progression Preview</span>
+              <span>Key Features Highlights</span>
             </div>
             <div className="grid grid-cols-2 gap-2">
-              {game.growthTiers.slice(0, 2).map((tier, idx) => (
+              {game.features.slice(0, 2).map((feat, idx) => (
                 <div key={idx} className="bg-slate-900/60 p-2.5 rounded-xl border border-slate-800 text-[11px]">
-                  <span className="font-bold text-pink-300 block">{tier.name}</span>
-                  <span className="text-slate-400 line-clamp-1">{tier.desc}</span>
+                  <span className="font-bold text-pink-300 block truncate">{feat.title}</span>
+                  <span className="text-slate-400 line-clamp-1">{feat.desc}</span>
                 </div>
               ))}
             </div>
