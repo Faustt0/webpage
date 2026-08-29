@@ -6,7 +6,7 @@ export const games = [
     genre: "Turn Based Gacha",
     status: "Active Development",
     statusColor: "sky",
-    releaseStage: "Version 1.1.5",
+    releaseStage: "Version 1.2.0",
     bannerTag: "Post-Apocalyptic RPG • Genetic Evolutions • Tactical Squads",
     theme: {
       primary: "from-sky-500 via-cyan-500 to-blue-600",
