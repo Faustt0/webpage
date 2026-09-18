@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Returning to Beyond Evolution...</title>
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="font-family: sans-serif; text-align: center; margin-top: 3rem;">
+<p>Returning you to the app&hellip;</p>
+<p>If nothing happens, <a id="fallback" href="#">tap here</a>.</p>
+<script>
+  var target = 'beyondevolution://oauth-callback' + window.location.search;
+  document.getElementById('fallback').href = target;
+  window.location.replace(target);
+</script>
+</body>
+</html>
