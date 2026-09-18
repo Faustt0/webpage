@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Patreon Verification &mdash; Beyond Evolution</title>
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap');
+
+  :root {
+    --bg: #06070d;
+    --card: #12131c;
+    --border: #232538;
+    --muted: #8e93a6;
+    --pink: #ec4899;
+    --purple: #8b5cf6;
+    --emerald: #10b981;
+    --amber: #f59e0b;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    background-image:
+      linear-gradient(to right, rgba(236, 72, 153, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    color: #f1f5f9;
+    font-family: 'Inter', system-ui, sans-serif;
+    padding: 24px;
+  }
+
+  .panel {
+    width: 100%;
+    max-width: 440px;
+    background: rgba(18, 19, 28, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 32px;
+    text-align: center;
+    box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
+  }
+
+  .icon {
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 22px;
+    margin: 0 0 10px;
+  }
+
+  p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 6px;
+  }
+
+  a { color: var(--pink); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .hint {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #5b5f73;
+  }
+
+  .accent-success { color: var(--emerald); }
+  .accent-fail { color: #fb7185; }
+  .accent-warn { color: var(--amber); }
+  .accent-neutral { color: var(--purple); }
+</style>
+</head>
+<body>
+  <div class="panel">
+    <div class="icon" id="icon"></div>
+    <h1 id="title"></h1>
+    <p id="message"></p>
+    <div class="hint">You can close this tab and return to Beyond Evolution.</div>
+  </div>
+  <script>
+    var CONTENT = {
+      success: {
+        icon: '&#9989;', accent: 'accent-success',
+        title: 'Authentication Complete',
+        message: "You've successfully verified with Patreon."
+      },
+      not_member: {
+        icon: '&#129300;', accent: 'accent-warn',
+        title: 'Not a Patreon member?',
+        message: 'You don&rsquo;t currently appear to be a member of <a href="https://www.patreon.com/faustto" target="_blank" rel="noopener">the campaign</a>, so you won&rsquo;t receive extra rewards.'
+      },
+      used: {
+        icon: '&#128279;', accent: 'accent-neutral',
+        title: 'Account Already Linked',
+        message: 'That Patreon account is already linked to another in-game account.'
+      },
+      cancelled: {
+        icon: '&#10060;', accent: 'accent-fail',
+        title: 'Authentication Cancelled',
+        message: "You couldn't be verified by Patreon."
+      }
+    };
+
+    var params = new URLSearchParams(window.location.search);
+    var status = params.get('status');
+    var data = CONTENT[status] || CONTENT.cancelled;
+
+    document.getElementById('icon').innerHTML = data.icon;
+    var titleEl = document.getElementById('title');
+    titleEl.textContent = data.title;
+    titleEl.className = data.accent;
+    document.getElementById('message').innerHTML = data.message;
+  </script>
+</body>
+</html>
