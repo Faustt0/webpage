@@ -1,6 +1,7 @@
 import React from 'react';
 import { HelpCircle, MessageSquare, Sparkles } from 'lucide-react';
 import { socials } from '../data/socials';
+import { DiscordIcon } from '../components/SocialIcons';
 
 export default function QnAPage() {
   return (
@@ -41,7 +42,7 @@ export default function QnAPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl text-xs font-extrabold bg-gradient-to-r from-rose-500 to-purple-600 text-white shadow-glow-pink hover:scale-[1.02] transition-transform"
           >
-            <MessageSquare className="w-4 h-4" />
+            <DiscordIcon className="w-4 h-4" />
             <span>Ask a Question on Discord</span>
           </a>
         </div>

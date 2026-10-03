@@ -5,6 +5,7 @@ import {
   Radio, Zap, Layers, Activity, AlertTriangle, Users, ExternalLink, Sparkles
 } from 'lucide-react';
 import { socials } from '../../data/socials';
+import { DiscordIcon, ItchIcon, PatreonIcon } from '../../components/SocialIcons';
 
 // ============================================================================
 // Post-Apocalyptic Tactical HUD Background Canvas with Earth Map Outline
@@ -497,7 +498,7 @@ export default function BeyondEvolutionPage({ game }) {
                   className="tactical-btn-frame"
                 >
                   <div className="tactical-btn-inner flex items-center space-x-2.5 px-7 py-3.5 bg-gradient-to-r from-sky-400 via-cyan-400 to-sky-300 hover:from-sky-300 hover:to-cyan-200 text-slate-950 font-scifi font-bold text-xs uppercase tracking-wider cursor-pointer">
-                    <Gamepad2 className="w-4 h-4 text-slate-950" />
+                    <ItchIcon className="w-4 h-4 text-slate-950" />
                     <span>Play on itch.io</span>
                   </div>
                 </a>
@@ -510,7 +511,7 @@ export default function BeyondEvolutionPage({ game }) {
                   style={{ background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.7), rgba(14, 165, 233, 0.4), rgba(56, 189, 248, 0.7))' }}
                 >
                   <div className="tactical-btn-inner flex items-center space-x-2 px-6 py-3.5 bg-[#07172b] hover:bg-[#0c2442] text-sky-300 font-scifi font-bold text-xs uppercase tracking-wider">
-                    <Heart className="w-4 h-4 text-sky-400 fill-sky-400/20" />
+                    <PatreonIcon className="w-4 h-4 text-sky-400" />
                     <span>Patreon In-Game Rewards</span>
                   </div>
                 </a>
@@ -790,7 +791,7 @@ export default function BeyondEvolutionPage({ game }) {
                     style={{ background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.8), rgba(14, 165, 233, 0.5), rgba(56, 189, 248, 0.8))' }}
                   >
                     <div className="tactical-btn-inner inline-flex items-center space-x-2 px-5 py-2.5 text-xs font-scifi font-bold bg-[#071c36] hover:bg-[#0b2950] text-sky-300 cursor-pointer">
-                      <MessageSquare className="w-3.5 h-3.5 text-sky-400" />
+                      <DiscordIcon className="w-3.5 h-3.5 text-sky-400" />
                       <span>Ask on Discord</span>
                     </div>
                   </a>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { socials } from '../../data/socials';
+import { DiscordIcon, ItchIcon, PatreonIcon } from '../../components/SocialIcons';
 
 // ============================================================================
 // Custom 16-Bit Sci-Fi Pixel Art SVG Icons (White & Red Theme)
@@ -392,7 +393,7 @@ export default function ExpandingHorizonsPage({ game }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2.5 px-7 py-3.5 bg-white hover:bg-slate-100 text-slate-950 border-2 border-red-500 font-pixel text-xs font-bold uppercase tracking-wider shadow-[0_4px_0_#b91c1c] hover:translate-y-[-2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
               >
-                <PixelMicrochip className="w-4 h-4 text-red-600" />
+                <ItchIcon className="w-4 h-4 text-red-600" />
                 <span>Play on itch.io</span>
               </a>
 
@@ -402,7 +403,7 @@ export default function ExpandingHorizonsPage({ game }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-6 py-3.5 bg-[#14080a] hover:bg-[#1f0c0f] text-white border-2 border-red-500/80 font-pixel text-xs font-bold uppercase tracking-wider shadow-[0_4px_0_#7f1d1d] hover:translate-y-[-2px] active:translate-y-[2px] active:shadow-none transition-all"
               >
-                <PixelHeartRed className="w-4 h-4" />
+                <PatreonIcon className="w-4 h-4" />
                 <span>Support on Patreon</span>
               </a>
             </div>
@@ -610,7 +611,7 @@ export default function ExpandingHorizonsPage({ game }) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white font-pixel text-[10px] uppercase tracking-wider border-2 border-white shadow-[0_3px_0_#991b1b] cursor-pointer transition-all"
                 >
-                  <PixelLabFlask className="w-3.5 h-3.5" />
+                  <DiscordIcon className="w-3.5 h-3.5" />
                   <span>Ask on Discord</span>
                 </a>
               </div>

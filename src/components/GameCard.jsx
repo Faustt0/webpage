@@ -1,5 +1,6 @@
 import React from 'react';
 import { Gamepad2, Heart, BookOpen, CheckCircle, ExternalLink, Sparkles, ChevronRight } from 'lucide-react';
+import { ItchIcon, PatreonIcon } from './SocialIcons';
 
 export default function GameCard({ game, onOpenModal, onSelectGameGuides }) {
   const isEmerald = game.statusColor === 'emerald';
@@ -61,7 +62,7 @@ export default function GameCard({ game, onOpenModal, onSelectGameGuides }) {
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-1.5 py-2.5 px-3 rounded-lg text-xs font-bold bg-rose-600/20 hover:bg-rose-600/30 text-rose-300 border border-rose-500/30 hover:border-rose-500/50 transition-all text-center"
             >
-              <Gamepad2 className="w-4 h-4 text-rose-400" />
+              <ItchIcon className="w-4 h-4 text-rose-400" />
               <span>itch.io Page</span>
               <ExternalLink className="w-3 h-3 text-rose-400" />
             </a>
@@ -72,7 +73,7 @@ export default function GameCard({ game, onOpenModal, onSelectGameGuides }) {
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-1.5 py-2.5 px-3 rounded-lg text-xs font-bold bg-purple-600/20 hover:bg-purple-600/30 text-purple-300 border border-purple-500/30 hover:border-purple-500/50 transition-all text-center"
             >
-              <Heart className="w-4 h-4 text-purple-400 fill-purple-400/30" />
+              <PatreonIcon className="w-4 h-4 text-purple-400" />
               <span>Early Builds</span>
             </a>
           </div>

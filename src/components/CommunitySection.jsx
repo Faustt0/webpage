@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heart, MessageSquare, Palette, Gamepad2, ExternalLink, Sparkles, Flame } from 'lucide-react';
 import { socials } from '../data/socials';
-import { XIcon, BlueskyIcon } from './SocialIcons';
+import { XIcon, BlueskyIcon, DiscordIcon, PatreonIcon, ItchIcon, DeviantArtIcon } from './SocialIcons';
 
 export default function CommunitySection() {
   return (
@@ -26,7 +26,7 @@ export default function CommunitySection() {
           >
             <div>
               <div className="w-12 h-12 rounded-2xl bg-rose-500/20 border border-rose-500/30 flex items-center justify-center mb-5 text-rose-400 group-hover:scale-110 transition-transform">
-                <Heart className="w-6 h-6 fill-current" />
+                <PatreonIcon className="w-5 h-5" />
               </div>
               <div className="flex items-center justify-between mb-1.5">
                 <h3 className="font-display font-extrabold text-xl text-white group-hover:text-rose-300 transition-colors">Patreon</h3>
@@ -51,7 +51,7 @@ export default function CommunitySection() {
           >
             <div>
               <div className="w-12 h-12 rounded-2xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center mb-5 text-indigo-400 group-hover:scale-110 transition-transform">
-                <MessageSquare className="w-6 h-6" />
+                <DiscordIcon className="w-5 h-5" />
               </div>
               <div className="flex items-center justify-between mb-1.5">
                 <h3 className="font-display font-extrabold text-xl text-white group-hover:text-indigo-300 transition-colors">Discord</h3>
@@ -76,7 +76,7 @@ export default function CommunitySection() {
           >
             <div>
               <div className="w-12 h-12 rounded-2xl bg-rose-500/20 border border-rose-500/30 flex items-center justify-center mb-5 text-rose-400 group-hover:scale-110 transition-transform">
-                <Gamepad2 className="w-6 h-6" />
+                <ItchIcon className="w-5 h-5" />
               </div>
               <div className="flex items-center justify-between mb-1.5">
                 <h3 className="font-display font-extrabold text-xl text-white group-hover:text-rose-300 transition-colors">itch.io</h3>
@@ -101,7 +101,7 @@ export default function CommunitySection() {
           >
             <div>
               <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center mb-5 text-emerald-400 group-hover:scale-110 transition-transform">
-                <Palette className="w-6 h-6" />
+                <DeviantArtIcon className="w-5 h-5" />
               </div>
               <div className="flex items-center justify-between mb-1.5">
                 <h3 className="font-display font-extrabold text-xl text-white group-hover:text-emerald-300 transition-colors">DeviantArt</h3>

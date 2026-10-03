@@ -5,6 +5,7 @@ import {
   Pipette, ShieldAlert, Zap, Layers, RefreshCw, Gauge, Sliders, Users
 } from 'lucide-react';
 import { socials } from '../../data/socials';
+import { PatreonIcon } from '../../components/SocialIcons';
 
 // ============================================================================
 // Interactive Incubation Chamber Fluid & Bubbles Background Canvas
@@ -363,7 +364,7 @@ export default function PerfectSpecimenPage({ game }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-7 py-4 bg-[#142330] hover:bg-[#1a2f42] text-emerald-300 border-2 border-emerald-400/80 font-mono font-bold text-xs uppercase tracking-wider shadow-[0_0_15px_rgba(16,185,129,0.25)] hover:scale-[1.02] active:scale-[0.98] transition-all"
               >
-                <Heart className="w-4 h-4 text-emerald-400 fill-emerald-400/20" />
+                <PatreonIcon className="w-4 h-4 text-emerald-400" />
                 <span>INFO ON PATREON</span>
               </a>
             </div>

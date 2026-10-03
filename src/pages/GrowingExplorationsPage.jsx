@@ -1,6 +1,7 @@
 ﻿import React, { useState } from 'react';
 import { Gamepad2, Heart, Sparkles, CheckCircle2, Monitor, Cpu, HelpCircle, MessageSquare, ChevronDown, Compass, Sword, Shield, Map, Scroll, Award, Trees, Flame } from 'lucide-react';
 import { socials } from '../data/socials';
+import { DiscordIcon, ItchIcon, PatreonIcon } from '../components/SocialIcons';
 
 export default function GrowingExplorationsPage({ game }) {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
@@ -80,7 +81,7 @@ export default function GrowingExplorationsPage({ game }) {
               rel="noopener noreferrer"
               className="flex items-center space-x-2.5 px-8 py-3.5 rounded-xl text-sm font-extrabold text-white bg-gradient-to-r from-emerald-500 via-teal-600 to-emerald-700 hover:from-emerald-600 hover:to-teal-700 border border-emerald-400/40 shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all transform hover:-translate-y-0.5 active:scale-95"
             >
-              <Gamepad2 className="w-5 h-5 text-emerald-100" />
+              <ItchIcon className="w-5 h-5 text-emerald-100" />
               <span>Download on itch.io</span>
             </a>
 
@@ -90,7 +91,7 @@ export default function GrowingExplorationsPage({ game }) {
               rel="noopener noreferrer"
               className="flex items-center space-x-2 px-7 py-3.5 rounded-xl text-sm font-bold bg-[#091a14]/90 hover:bg-[#0d261d] text-emerald-300 border border-emerald-500/40 hover:border-emerald-400 transition-all transform hover:-translate-y-0.5"
             >
-              <Heart className="w-4 h-4 text-emerald-400 fill-emerald-400/20" />
+              <PatreonIcon className="w-4 h-4 text-emerald-400" />
               <span>Patreon Early Builds</span>
             </a>
           </div>
@@ -270,7 +271,7 @@ export default function GrowingExplorationsPage({ game }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl text-xs font-mono font-bold bg-[#091b14] hover:bg-[#0e2a1f] text-emerald-300 border border-emerald-500/30 hover:border-emerald-400/60 transition-all shadow-sm"
               >
-                <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
+                <DiscordIcon className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Ask a Question on Discord</span>
               </a>
             </div>

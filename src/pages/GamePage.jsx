@@ -5,6 +5,7 @@ import GrowingExplorationsPage from './games/GrowingExplorationsPage';
 import BeyondEvolutionPage from './games/BeyondEvolutionPage';
 import ExpandingHorizonsPage from './games/ExpandingHorizonsPage';
 import PerfectSpecimenPage from './games/PerfectSpecimenPage';
+import { DiscordIcon, ItchIcon, PatreonIcon } from '../components/SocialIcons';
 
 export default function GamePage({ game, onBackHome, onSelectOtherGame }) {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
@@ -80,7 +81,7 @@ export default function GamePage({ game, onBackHome, onSelectOtherGame }) {
               rel="noopener noreferrer"
               className={`flex items-center space-x-2.5 px-7 py-3.5 rounded-xl text-sm font-extrabold text-white bg-gradient-to-r ${game.theme.btnGradient} shadow-glow-pink hover:scale-[1.02] transition-all`}
             >
-              <Gamepad2 className="w-5 h-5" />
+              <ItchIcon className="w-5 h-5" />
               <span>Get on itch.io</span>
             </a>
 
@@ -90,7 +91,7 @@ export default function GamePage({ game, onBackHome, onSelectOtherGame }) {
               rel="noopener noreferrer"
               className="flex items-center space-x-2 px-6 py-3.5 rounded-xl text-sm font-bold bg-slate-900/90 hover:bg-slate-800 text-pink-300 border border-pink-500/30 hover:border-pink-500/60 transition-all"
             >
-              <Heart className="w-4 h-4 text-pink-400 fill-current" />
+              <PatreonIcon className="w-4 h-4 text-pink-400" />
               <span>Patreon Early Builds</span>
             </a>
           </div>
@@ -240,7 +241,7 @@ export default function GamePage({ game, onBackHome, onSelectOtherGame }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-pink-300 border border-pink-500/20 hover:border-pink-500/40 transition-all"
               >
-                <MessageSquare className="w-3.5 h-3.5 text-indigo-400" />
+                <DiscordIcon className="w-3.5 h-3.5 text-indigo-400" />
                 <span>Ask a Question on Discord</span>
               </a>
             </div>

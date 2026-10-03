@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, Gamepad2, Heart, CheckCircle2, Monitor, HardDrive, Cpu, Sparkles, ExternalLink, BookOpen } from 'lucide-react';
+import { ItchIcon, PatreonIcon } from './SocialIcons';
 
 export default function GameModal({ game, onClose, onNavigateToGuides }) {
   if (!game) return null;
@@ -120,7 +121,7 @@ export default function GameModal({ game, onClose, onNavigateToGuides }) {
               rel="noopener noreferrer"
               className="flex items-center space-x-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-rose-600 hover:bg-rose-500 text-white transition-all shadow-glow-pink"
             >
-              <Gamepad2 className="w-4 h-4" />
+              <ItchIcon className="w-4 h-4" />
               <span>Get on itch.io</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
@@ -131,7 +132,7 @@ export default function GameModal({ game, onClose, onNavigateToGuides }) {
               rel="noopener noreferrer"
               className="flex items-center space-x-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-purple-600 hover:bg-purple-500 text-white transition-all shadow-glow-purple"
             >
-              <Heart className="w-4 h-4 fill-current" />
+              <PatreonIcon className="w-4 h-4 />
               <span>Support on Patreon</span>
             </a>
           </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { socials } from '../../data/socials';
+import { DiscordIcon, ItchIcon, PatreonIcon } from '../../components/SocialIcons';
 
 // ============================================================================
 // Authentic 16-Bit Pixel Art SVG Icons (Medieval Fantasy Set)
@@ -386,8 +387,8 @@ export default function GrowingExplorationsPage({ game }) {
                 rel="noopener noreferrer"
                 className="pixel-btn-emerald inline-flex items-center space-x-3 px-6 py-3.5 font-pixel text-xs text-white uppercase tracking-wider cursor-pointer"
               >
-                <PixelSword className="w-4 h-4 text-amber-300" />
-                <span>▶ Play On Itch.io</span>
+                <ItchIcon className="w-4 h-4 text-amber-300" />
+                <span>Play On Itch.io</span>
               </a>
 
               <a
@@ -396,8 +397,8 @@ export default function GrowingExplorationsPage({ game }) {
                 rel="noopener noreferrer"
                 className="pixel-btn-amber inline-flex items-center space-x-3 px-6 py-3.5 font-pixel text-xs text-amber-100 uppercase tracking-wider cursor-pointer"
               >
-                <PixelChest className="w-4 h-4 text-amber-300" />
-                <span>★ Patreon Early Builds</span>
+                <PatreonIcon className="w-4 h-4 text-amber-300" />
+                <span>Patreon Early Builds</span>
               </a>
             </div>
 
@@ -608,7 +609,7 @@ export default function GrowingExplorationsPage({ game }) {
                   rel="noopener noreferrer"
                   className="pixel-btn-amber inline-flex items-center space-x-2 px-5 py-2.5 font-pixel text-[10px] text-amber-100 uppercase tracking-wider cursor-pointer"
                 >
-                  <PixelPotion className="w-3.5 h-3.5" />
+                  <DiscordIcon className="w-3.5 h-3.5" />
                   <span>Ask on Discord</span>
                 </a>
               </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Gamepad2, Heart, MessageSquare, Palette, Flame } from 'lucide-react';
 import { socials } from '../data/socials';
 import { games } from '../data/games';
-import { XIcon, BlueskyIcon } from './SocialIcons';
+import { XIcon, BlueskyIcon, DiscordIcon, PatreonIcon, ItchIcon, DeviantArtIcon } from './SocialIcons';
 
 export default function Footer({ onNavigatePage, onSelectGame }) {
   return (
@@ -20,16 +20,16 @@ export default function Footer({ onNavigatePage, onSelectGame }) {
 
             <div className="flex items-center space-x-3 pt-2">
               <a href={socials.itch.url} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors" title="itch.io">
-                <Gamepad2 className="w-4 h-4 text-rose-400" />
+                <ItchIcon className="w-4 h-4 text-rose-400" />
               </a>
               <a href={socials.patreon.url} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors" title="Patreon">
-                <Heart className="w-4 h-4 text-pink-400 fill-pink-400/20" />
+                <PatreonIcon className="w-4 h-4 text-pink-400" />
               </a>
               <a href={socials.discord.url} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors" title="Discord">
-                <MessageSquare className="w-4 h-4 text-indigo-400" />
+                <DiscordIcon className="w-4 h-4 text-indigo-400" />
               </a>
               <a href={socials.deviantart.url} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors" title="DeviantArt">
-                <Palette className="w-4 h-4 text-emerald-400" />
+                <DeviantArtIcon className="w-4 h-4 text-emerald-400" />
               </a>
               <a href={socials.x.url} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors" title="X">
                 <XIcon className="w-4 h-4 text-slate-200" />

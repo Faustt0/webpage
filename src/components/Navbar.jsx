@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Gamepad2, Users, Heart, Sparkles, Menu, X, ChevronDown, Compass, Zap, Activity, FlaskConical } from 'lucide-react';
 import { games } from '../data/games';
 import { socials } from '../data/socials';
+import { PatreonIcon } from './SocialIcons';
 
 export default function Navbar({ activePage, selectedGameId, onNavigatePage, onSelectGame }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -224,7 +225,7 @@ export default function Navbar({ activePage, selectedGameId, onNavigatePage, onS
               rel="noopener noreferrer"
               className={`flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-extrabold ${currentTheme.patreonBtn} transition-all transform hover:scale-[1.02]`}
             >
-              <Heart className="w-3.5 h-3.5 fill-current" />
+              <PatreonIcon className="w-3.5 h-3.5" />
               <span>Patreon</span>
             </a>
           </div>
@@ -293,7 +294,7 @@ export default function Navbar({ activePage, selectedGameId, onNavigatePage, onS
               rel="noopener noreferrer"
               className={`flex items-center justify-center space-x-2 py-2.5 rounded-xl text-xs font-bold ${currentTheme.patreonBtn}`}
             >
-              <Heart className="w-4 h-4 fill-current" />
+              <PatreonIcon className="w-4 h-4" />
               <span>Patreon</span>
             </a>
           </div>
