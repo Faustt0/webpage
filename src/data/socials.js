@@ -34,5 +34,21 @@ export const socials = {
     icon: "Palette",
     badge: "Art & Devlogs",
     color: "#05cc47"
+  },
+  x: {
+    name: "X",
+    url: "https://x.com/fausttodev",
+    description: "Follow for quick updates, previews, and news.",
+    handle: "@fausttodev",
+    badge: "Updates",
+    color: "#e7e9ea"
+  },
+  bluesky: {
+    name: "Bluesky",
+    url: "https://bsky.app/profile/faustto-dev.bsky.social",
+    description: "Follow on Bluesky for development news and previews.",
+    handle: "@faustto-dev.bsky.social",
+    badge: "Updates",
+    color: "#1185fe"
   }
 };

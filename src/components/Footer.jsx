@@ -2,6 +2,7 @@ import React from 'react';
 import { Gamepad2, Heart, MessageSquare, Palette, Flame } from 'lucide-react';
 import { socials } from '../data/socials';
 import { games } from '../data/games';
+import { XIcon, BlueskyIcon } from './SocialIcons';
 
 export default function Footer({ onNavigatePage, onSelectGame }) {
   return (
@@ -29,6 +30,12 @@ export default function Footer({ onNavigatePage, onSelectGame }) {
               </a>
               <a href={socials.deviantart.url} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors" title="DeviantArt">
                 <Palette className="w-4 h-4 text-emerald-400" />
+              </a>
+              <a href={socials.x.url} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors" title="X">
+                <XIcon className="w-4 h-4 text-slate-200" />
+              </a>
+              <a href={socials.bluesky.url} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors" title="Bluesky">
+                <BlueskyIcon className="w-4 h-4 text-sky-400" />
               </a>
             </div>
           </div>
