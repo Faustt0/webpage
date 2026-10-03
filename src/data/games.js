@@ -6,7 +6,7 @@ export const games = [
     genre: "Turn Based Gacha",
     status: "Active Development",
     statusColor: "sky",
-    releaseStage: "Version 1.2.0",
+    releaseStage: "Version 1.2.1",
     bannerTag: "Post-Apocalyptic RPG • Genetic Evolutions • Tactical Squads",
     theme: {
       primary: "from-sky-500 via-cyan-500 to-blue-600",
@@ -48,9 +48,32 @@ Playing as a young scientist researching demon biology, you discover that when a
     ],
     contributors: [
       { name: "Faustto", role: "Programming & Art" },
-      { name: "Robomuffin", role: "Writing" }
+      { name: "Robomuffin", role: "Writing" },
+      { name: "D/D/DANTZ", role: "Writing" },
+      { name: "VIPERBYTE_GLHF", role: "Playtester" }
     ],
-    faqs: [],
+    faqs: [
+      {
+        type: "guide",
+        question: "Beating the Nun boss",
+        answer: "The Nun is a known difficulty spike, even for teams around level 40. Bringing Maria or using freeze abilities helps a lot. The difficulty is being looked at for upcoming patches."
+      },
+      {
+        type: "guide",
+        question: "Story stages and farming stages",
+        answer: "Not every stage advances the story. Some, like R-1 (the wolves), are farming stages and are not required for the story. In the current version the last story stage is 1-20."
+      },
+      {
+        type: "question",
+        question: "How does character growth work?",
+        answer: "Only Hyper and Prime characters can grow, and most Ultra characters cannot. Growth happens during combat, not in a dedicated scene."
+      },
+      {
+        type: "question",
+        question: "Will there be more growth stages for characters?",
+        answer: "There are no plans to add multiple growth stages for every character. With the number of characters in the game, creating and maintaining several stages for each of them is not sustainable."
+      }
+    ],
     systemRequirements: {
       processor: "Dual-Core 2.0 GHz (x86_64 / SSE4.2)",
       memory: "4 GB RAM",
@@ -121,7 +144,23 @@ Embark on an expansive adventure across diverse biomes, battling distinct advers
       { name: "FinuArts", role: "Pixel Art", url: "https://x.com/FinuArts" },
       { name: "Jaasistyles", role: "Pixel Art", url: "https://www.fiverr.com/s/ak1k9WA" }
     ],
-    faqs: [],
+    faqs: [
+      {
+        type: "guide",
+        question: "Getting unstuck after the Rosetales sleeping sequence",
+        answer: "This is a known issue that can leave a save unable to progress. Keep a backup copy of your save from before this point, and if you're already stuck, ask on Discord."
+      },
+      {
+        type: "question",
+        question: "Why is Growing Explorations on hiatus, and when is the next update?",
+        answer: "Development is on indefinite hiatus. The game was started on an older version of the Godot engine, which left technical debt, and adding new features needs a fundamental restructuring of the code. Art asset delays from collaborating artists and academic commitments have also limited development time. Update cycles were already multi-month. A final, limited update (one boss and dwarf portraits) is planned for sometime in the future."
+      },
+      {
+        type: "question",
+        question: "Will there be an Android or mobile version?",
+        answer: "Unlikely. Porting the game to mobile would require recoding it, which is not planned."
+      }
+    ],
     systemRequirements: {
       processor: "Dual-Core 2.0 GHz (x86_64 / SSE4.2)",
       memory: "4 GB RAM",

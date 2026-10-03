@@ -751,7 +751,7 @@ export default function BeyondEvolutionPage({ game }) {
                         onClick={() => toggleFaq(idx)}
                         className="w-full p-4 text-left flex items-center justify-between text-sky-200 font-scifi font-bold text-xs sm:text-sm hover:text-sky-100 transition-colors"
                       >
-                        <span>{faq.question}</span>
+                        <span className="flex items-center text-left"><span className={`shrink-0 mr-2 text-[10px] uppercase font-black px-2 py-0.5 rounded-full border ${faq.type === 'guide' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40' : 'bg-sky-500/20 text-sky-300 border-sky-500/40'}`}>{faq.type === 'guide' ? 'Guide' : 'Question'}</span><span>{faq.question}</span></span>
                         <ChevronDown className={`w-4 h-4 text-sky-400 transition-transform duration-200 ${openFaqIndex === idx ? 'rotate-180' : ''}`} />
                       </button>
                       {openFaqIndex === idx && (

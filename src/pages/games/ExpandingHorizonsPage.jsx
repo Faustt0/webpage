@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { socials } from '../../data/socials';
-import { DiscordIcon, ItchIcon, PatreonIcon } from '../../components/SocialIcons';
+import { ItchIcon, PatreonIcon } from '../../components/SocialIcons';
 
 // ============================================================================
 // Custom 16-Bit Sci-Fi Pixel Art SVG Icons (White & Red Theme)
@@ -324,14 +323,8 @@ function SciFiSimulationCanvas() {
 // Main Expanding Horizons Page (Sci-Fi Pixel Art Simulation - White & Red Theme)
 // ============================================================================
 export default function ExpandingHorizonsPage({ game }) {
-  const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   if (!game) return null;
-  const faqs = game.faqs || [];
-
-  const toggleFaq = (index) => {
-    setOpenFaqIndex(openFaqIndex === index ? null : index);
-  };
 
   return (
     <div className="relative min-h-screen text-slate-100 font-sans pb-24 select-none">
@@ -340,6 +333,17 @@ export default function ExpandingHorizonsPage({ game }) {
 
       <div className="relative z-10 py-8 sm:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
+        {/* ================= DEPRECATION NOTICE ================= */}
+        <div className="bg-[#1c0a0e]/95 border-2 border-red-500 p-4 sm:p-5 shadow-[0_0_20px_rgba(239,68,68,0.35)] flex items-start space-x-3">
+          <PixelHeartRed className="w-5 h-5 shrink-0 mt-0.5" />
+          <div className="space-y-1">
+            <p className="font-pixel text-xs sm:text-sm text-white">DEPRECATED - NO LONGER IN DEVELOPMENT</p>
+            <p className="font-mono text-xs sm:text-sm text-slate-300 leading-relaxed">
+              {game.title} is no longer in development and will not receive further updates or bug fixes. It remains available as an archive.
+            </p>
+          </div>
+        </div>
+
         {/* ================= HERO SECTION (White & Red Sci-Fi Pixel Box) ================= */}
         <section className="bg-[#0b0c12]/95 border-2 border-white/80 p-6 sm:p-10 lg:p-12 shadow-[0_0_30px_rgba(239,68,68,0.25)] relative">
           
@@ -558,66 +562,6 @@ export default function ExpandingHorizonsPage({ game }) {
             </div>
           </section>
         )}
-
-        {/* ================= GUIDES & FAQ ================= */}
-        <section className="bg-[#0b0c12]/95 border-2 border-white/80 p-6 sm:p-8 space-y-6 shadow-xl">
-          <div className="flex items-center space-x-3 border-b-2 border-red-500/60 pb-4">
-            <PixelDisc className="w-6 h-6 text-red-500" />
-            <h2 className="font-pixel text-sm sm:text-base text-white">
-              GUIDES & FAQ
-            </h2>
-          </div>
-
-          {faqs.length > 0 ? (
-            <div className="space-y-3">
-              {faqs.map((faq, idx) => (
-                <div
-                  key={idx}
-                  className="bg-[#12141e] border-2 border-white/30"
-                >
-                  <button
-                    onClick={() => toggleFaq(idx)}
-                    className="w-full p-4 text-left flex items-center justify-between font-pixel text-xs sm:text-sm text-white hover:text-red-400 transition-colors"
-                  >
-                    <span>■ {faq.question}</span>
-                    <span className="text-red-500 font-pixel text-[10px]">{openFaqIndex === idx ? '▲' : '▼'}</span>
-                  </button>
-                  {openFaqIndex === idx && (
-                    <div className="px-4 pb-4 font-mono text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 pt-3">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          ) : (
-            /* Empty FAQ State */
-            <div className="bg-[#12141e] p-8 sm:p-12 border-2 border-white/20 text-center space-y-4">
-              <div className="w-14 h-14 bg-[#1c0a0e] border-2 border-red-500 flex items-center justify-center mx-auto text-red-500 shadow-[0_0_15px_rgba(239,68,68,0.3)]">
-                <PixelDisc className="w-7 h-7" />
-              </div>
-              <div className="space-y-2 max-w-md mx-auto">
-                <h3 className="font-pixel text-xs sm:text-sm text-white">
-                  FREQUENTLY ASKED QUESTIONS COMING SOON
-                </h3>
-                <p className="font-mono text-xs text-slate-300 leading-relaxed">
-                  We are currently curating gameplay FAQs, stat management tips, and guides for {game.title}.
-                </p>
-              </div>
-              <div className="pt-2">
-                <a
-                  href={socials.discord.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white font-pixel text-[10px] uppercase tracking-wider border-2 border-white shadow-[0_3px_0_#991b1b] cursor-pointer transition-all"
-                >
-                  <DiscordIcon className="w-3.5 h-3.5" />
-                  <span>Ask on Discord</span>
-                </a>
-              </div>
-            </div>
-          )}
-        </section>
 
       </div>
     </div>

@@ -577,7 +577,7 @@ export default function GrowingExplorationsPage({ game }) {
                     onClick={() => toggleFaq(idx)}
                     className="w-full p-4 text-left flex items-center justify-between font-pixel text-xs sm:text-sm text-amber-200 hover:text-amber-100 transition-colors"
                   >
-                    <span>▶ {faq.question}</span>
+                    <span className="flex items-center text-left"><span className={`shrink-0 mr-2 text-[10px] uppercase font-black px-2 py-0.5 rounded-full border ${faq.type === 'guide' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40' : 'bg-amber-500/20 text-amber-300 border-amber-500/40'}`}>{faq.type === 'guide' ? 'Guide' : 'Question'}</span><span>▶ {faq.question}</span></span>
                     <span className="text-amber-400 font-pixel text-[10px]">{openFaqIndex === idx ? '▲' : '▼'}</span>
                   </button>
                   {openFaqIndex === idx && (
